@@ -7,7 +7,7 @@ namespace Usugi
     /// <summary>
     /// スコアをカウントするマネージャクラス
     /// </summary>
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : SingletonMonobehavior<ScoreManager>
     {
         [SerializeField] int _score = 0;
 
@@ -15,7 +15,7 @@ namespace Usugi
         /// スコアをカウントするクラス
         /// </summary>
         /// <param name="point"></param>
-        void AddScore(int point)
+        public void AddScore(int point)
         {
             _score += point;
         }

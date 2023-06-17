@@ -11,6 +11,7 @@ namespace Usugi
     public class Target : MonoBehaviour
     {
         [SerializeField] int _hp = 1;
+        [SerializeField] int _point = 1;
 
         /// <summary>
         /// ”í’e‚Ìˆ—
@@ -32,6 +33,7 @@ namespace Usugi
         void Death()
         {
             Debug.Log("Death");
+            ScoreManager.Instance.AddScore(_point);
         }
     }
 
