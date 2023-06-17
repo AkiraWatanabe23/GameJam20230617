@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using Usugi;
+using UnityEngine.UI;
 
 public class AirPlane : MonoBehaviour
 {
     [Tooltip("飛行機が円運動を行う中心座標")]
-    [SerializeField] private Transform _center = default;
+    [SerializeField] Transform _center;
+    [SerializeField] private Image _centerImage = default;
     [Tooltip("円運動の半径")]
     [SerializeField] private float _radius = 1f;
     [Tooltip("連射間隔")]
@@ -17,7 +19,6 @@ public class AirPlane : MonoBehaviour
     private float _timer = 0f;
     private float _theta = 0f;
     private BulletType _bulletType = BulletType.Normal;
-
     private void Update()
     {
         if (Input.GetMouseButton(0))
@@ -48,6 +49,7 @@ public class AirPlane : MonoBehaviour
 
     private void Attack()
     {
+        _timer = 0;
         if (_timer <= 0.0f)
         {
             AttackForType(_bulletType);
@@ -65,11 +67,20 @@ public class AirPlane : MonoBehaviour
     {
         if (bulletType == BulletType.Normal)
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(GetCenterPoint()), out RaycastHit hit))
+            Ray ray = Camera.main.ScreenPointToRay(_centerImage.rectTransform.position);
+            RaycastHit[] hits = Physics.RaycastAll(ray);
+            if  (hits.Length != 0)
             {
-                Debug.Log("あたった");
-                if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
+                for (int i = 0; i < 1; i++)
+                {
+                    if (hits[i].collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
+                }
             }
+            //if (Physics.Raycast(Camera.main.ScreenPointToRay(_center.position)))
+            //{
+            //    RaycastHit[] hits = Physics.RaycastAll(ray);
+            //    if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
+            //}
         }
         else
         {

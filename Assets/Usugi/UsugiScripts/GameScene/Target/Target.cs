@@ -47,7 +47,7 @@ namespace Usugi
         {
             Debug.Log("Death");
             GameSceneManager.Instance.AddScore(_point);
-            Instantiate(_effect);
+            Instantiate(_effect, gameObject.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

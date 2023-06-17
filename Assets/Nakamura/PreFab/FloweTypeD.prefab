@@ -71,6 +71,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2311333342965689256}
     m_Modifications:
+    - target: {fileID: 1150109177762246141, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: _effect
+      value: 
+      objectReference: {fileID: 2455076307426558921, guid: 6bb1af59d3748364dad2e76e2c6329c0, type: 3}
     - target: {fileID: 4745144349894341501, guid: ae464eb80607b8746848577499150750, type: 3}
       propertyPath: _gorl
       value: 
@@ -87,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5712736092052259808, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 6696152392951097915}
     - target: {fileID: 5712736092052259808, guid: ae464eb80607b8746848577499150750, type: 3}
       propertyPath: _sabotagePanel
       value: 
@@ -148,5 +156,10 @@ PrefabInstance:
 --- !u!4 &6696152392949197023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+  m_PrefabInstance: {fileID: 159292732737370817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6696152392951097915 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6834327861137494266, guid: ae464eb80607b8746848577499150750, type: 3}
   m_PrefabInstance: {fileID: 159292732737370817}
   m_PrefabAsset: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [Tooltip("ˆÚ“®–Ú•W’l")]
-    [SerializeField] private GameObject _gorl = null;
+    [SerializeField] private GameObject _goal = null;
     [SerializeField] private float _moveSpeed = 5;
     [SerializeField] private float _dis = 2;
     Vector3 _dirToGorl  = new Vector3 (0, 0, 0);
@@ -15,11 +15,11 @@ public class EnemyMove : MonoBehaviour
     bool goalToStart = true; 
     void Start()
     {
-        if (_gorl != null)
+        if (_goal != null)
         {
             var objPos =  gameObject.transform.position;
             _startPos = gameObject.transform.position;
-            _gorlPos = _gorl.transform.position;
+            _gorlPos = _goal.transform.position;
             _dirToGorl = new Vector3(_gorlPos.x - objPos.x, _gorlPos.y - objPos.y, _gorlPos.z - objPos.z);
         }
         else

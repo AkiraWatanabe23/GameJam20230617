@@ -91,6 +91,18 @@ PrefabInstance:
       propertyPath: _center
       value: 
       objectReference: {fileID: 4876910717220031729}
+    - target: {fileID: 6570539107892706105, guid: 1ed6de0cb7ad0f9429edafdac066ca66, type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570539107892706105, guid: 1ed6de0cb7ad0f9429edafdac066ca66, type: 3}
+      propertyPath: _rotateSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668531047492198354, guid: 1ed6de0cb7ad0f9429edafdac066ca66, type: 3}
+      propertyPath: _effect
+      value: 
+      objectReference: {fileID: 2455076307426558921, guid: 6bb1af59d3748364dad2e76e2c6329c0, type: 3}
     - target: {fileID: 7044658399026493581, guid: 1ed6de0cb7ad0f9429edafdac066ca66, type: 3}
       propertyPath: m_RootOrder
       value: 0
