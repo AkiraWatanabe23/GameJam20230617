@@ -970,9 +970,6 @@ MonoBehaviour:
   - {fileID: 743157495}
   _toTitleSceneButton: {fileID: 967307665}
   _toGameSceneButton: {fileID: 1618614605}
-  _startSceneName: Title
-  _gameSceneName: 
-  _loadedScore: 
 --- !u!4 &1287837327
 Transform:
   m_ObjectHideFlags: 0
@@ -1093,6 +1090,18 @@ PrefabInstance:
     - target: {fileID: 7565511491120513140, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: m_Name
       value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
+      propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
+      propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
+      propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513143, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: m_Pivot.x
