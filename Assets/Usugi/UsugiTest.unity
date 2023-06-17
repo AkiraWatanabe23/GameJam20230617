@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 1467001276}
   - component: {fileID: 1467001280}
   - component: {fileID: 1467001281}
-  - component: {fileID: 1467001282}
+  - component: {fileID: 1467001283}
   m_Layer: 0
   m_Name: TargetTest
   m_TagString: Untagged
@@ -1206,7 +1206,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1467001282
+--- !u!114 &1467001283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1215,9 +1215,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1467001275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 298204f583dec1a409995ca92e5dd5d6, type: 3}
+  m_Script: {fileID: 11500000, guid: aaddedf663bcf344f8dd8d1a6d94fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dur: 1
 --- !u!1 &1858252733
 GameObject:
   m_ObjectHideFlags: 0
