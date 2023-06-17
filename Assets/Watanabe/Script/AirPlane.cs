@@ -41,14 +41,13 @@ public class AirPlane : MonoBehaviour
     {
         if (_timer <= 0.0f)
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(_center.position), out RaycastHit hit))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(GetCenterPoint()), out RaycastHit hit))
             {
                 if (hit.collider.gameObject.TryGetComponent(out Target target))
                 {
                     target.Hit(_attackValue);
                 }
             }
-
             _timer = _interval;
         }
 
@@ -57,5 +56,15 @@ public class AirPlane : MonoBehaviour
         {
             _timer -= Time.deltaTime;
         }
+    }
+
+    /// <summary> カメラビューポートの中心座標を取得 </summary>
+    private Vector3 GetCenterPoint()
+    {
+        var viewportCenter = new Vector3(0.5f, 0.5f, Camera.main.nearClipPlane);
+        var worldCenter = Camera.main.ViewportToWorldPoint(viewportCenter);
+        Debug.Log(worldCenter);
+
+        return worldCenter;
     }
 }
