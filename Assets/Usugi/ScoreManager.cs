@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+namespace Usugi
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// スコアをカウントするマネージャクラス
+    /// </summary>
+    public class ScoreManager : MonoBehaviour
     {
-        
-    }
+        [SerializeField] int _score = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        /// <summary>
+        /// スコアをカウントするクラス
+        /// </summary>
+        /// <param name="point"></param>
+        void AddScore(int point)
+        {
+            _score += point;
+        }
+    
     }
 }
