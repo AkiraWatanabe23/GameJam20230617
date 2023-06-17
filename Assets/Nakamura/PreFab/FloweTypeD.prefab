@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &65872386292418874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2725658060954658217}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2725658060954658217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65872386292418874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2311333342965689256}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &995213279617731370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2311333342965689256}
+  m_Layer: 0
+  m_Name: FloweTypeD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2311333342965689256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995213279617731370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6696152392949197023}
+  - {fileID: 2725658060954658217}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &159292732737370817
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2311333342965689256}
+    m_Modifications:
+    - target: {fileID: 4745144349894341501, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: _gorl
+      value: 
+      objectReference: {fileID: 65872386292418874}
+    - target: {fileID: 5027548244125083530, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_Size.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027548244125083530, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_Size.y
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027548244125083530, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_Size.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712736092052259808, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: _sabotagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834327861135232574, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_Name
+      value: Furniture_foliageplant_08_LOD1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569509447049336037, guid: ae464eb80607b8746848577499150750, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae464eb80607b8746848577499150750, type: 3}
+--- !u!4 &6696152392949197023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6834327861135069726, guid: ae464eb80607b8746848577499150750, type: 3}
+  m_PrefabInstance: {fileID: 159292732737370817}
+  m_PrefabAsset: {fileID: 0}
