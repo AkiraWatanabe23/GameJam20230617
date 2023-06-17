@@ -82,7 +82,7 @@ public class AirPlane : MonoBehaviour
     /// <summary> カメラビューポートの中心座標を取得 </summary>
     private Vector3 GetCenterPoint()
     {
-        var viewportCenter = new Vector3(0.5f, 0.5f, Camera.main.nearClipPlane);
+        var viewportCenter = new Vector3(0.5f, 0.5f, 0f);
         var worldCenter = Camera.main.ViewportToWorldPoint(viewportCenter);
 
         return worldCenter;
