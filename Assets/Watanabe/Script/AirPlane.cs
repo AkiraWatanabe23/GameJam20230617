@@ -16,12 +16,19 @@ public class AirPlane : MonoBehaviour
 
     private float _timer = 0f;
     private float _theta = 0f;
+    private BulletType _bulletType = BulletType.Normal;
 
     private void Update()
     {
         if (Input.GetMouseButton(0))
         {
             Attack();
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            _bulletType = _bulletType == BulletType.Normal ?
+                          BulletType.Grenade : BulletType.Normal;
         }
     }
 
@@ -43,13 +50,7 @@ public class AirPlane : MonoBehaviour
     {
         if (_timer <= 0.0f)
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(GetCenterPoint()), out RaycastHit hit))
-            {
-                if (hit.collider.gameObject.TryGetComponent(out Target target))
-                {
-                    target.Hit(_attackValue);
-                }
-            }
+            AttackForType(_bulletType);
             _timer = _interval;
         }
 
@@ -57,6 +58,24 @@ public class AirPlane : MonoBehaviour
         if (_timer > 0.0f)
         {
             _timer -= Time.deltaTime;
+        }
+    }
+
+    private void AttackForType(BulletType bulletType)
+    {
+        if (bulletType == BulletType.Normal)
+        {
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(GetCenterPoint()), out RaycastHit hit))
+            {
+                if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
+            }
+        }
+        else
+        {
+            if (Physics.SphereCast(Camera.main.ScreenPointToRay(GetCenterPoint()), 5f, out RaycastHit hit))
+            {
+                if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
+            }
         }
     }
 
@@ -68,5 +87,11 @@ public class AirPlane : MonoBehaviour
         Debug.Log(worldCenter);
 
         return worldCenter;
+    }
+
+    public enum BulletType
+    {
+        Normal,
+        Grenade,
     }
 }
