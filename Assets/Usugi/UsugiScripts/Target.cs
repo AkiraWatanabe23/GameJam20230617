@@ -12,6 +12,21 @@ namespace Usugi
     {
         [SerializeField] int _hp = 1;
         [SerializeField] int _point = 1;
+        IEnemyBehavior _enemyBehavior;
+
+        private void Start()
+        {
+            InitializeEnemyRoutine();
+        }
+
+        /// <summary>
+        /// 自身の移動ルーチンを取得し、あるなら実行する
+        /// </summary>
+        private void InitializeEnemyRoutine()
+        {
+            TryGetComponent(out _enemyBehavior);
+            if (_enemyBehavior != null) _enemyBehavior.EnemyBehavior();
+        }
 
         /// <summary>
         /// 被弾時の処理
@@ -20,11 +35,7 @@ namespace Usugi
         public void Hit(int damage)
         {
             _hp -= damage;
-
-            if (_hp <= 0)
-            {
-                Death();
-            }
+            if (_hp <= 0) Death();
         }
 
         /// <summary>
