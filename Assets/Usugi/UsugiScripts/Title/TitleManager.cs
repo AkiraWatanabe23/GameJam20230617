@@ -15,7 +15,12 @@ namespace Usugi
 
         private void Start()
         {
-            _button.onClick.AddListener(() => SceneManager.LoadScene(Consts.Scenes[_loadSceneName]));
+            _button.onClick.AddListener(() => Fade.Instance.StartFadeOut());
+        }
+
+        public void SceneLoad()
+        {
+            SceneManager.LoadScene(Consts.Scenes[_loadSceneName]);
         }
     }
 }
