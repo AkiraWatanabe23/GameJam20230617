@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Constants;
 
 namespace Usugi
 {
@@ -14,8 +13,8 @@ namespace Usugi
         [SerializeField] int _score = 0;
         [SerializeField] float _limiTime = 30;
         [SerializeField] Text _scoreText;
+        [SerializeField] Text _timerText;
         string _gameSceneName = "";
-        string _resultSceneName = "";
         public int Score => _score;
 
         private void Start()
@@ -27,8 +26,13 @@ namespace Usugi
         private void Update()
         {
             CountTime();
+            SetText();
+        }
 
+        private void SetText()
+        {
             _scoreText.text = $"{_score}";
+            _timerText.text = $"{_limiTime}";
         }
 
         /// <summary>
@@ -68,7 +72,7 @@ namespace Usugi
         /// </summary>
         public void LoadResultScene()
         {
-            SceneManager.LoadScene(_resultSceneName);
+            SceneManager.LoadScene( Consts.Scenes[SceneNames.RESULT_SCENE]);
         }
     }
 }
