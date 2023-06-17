@@ -10,6 +10,7 @@ namespace Usugi
     public class ScoreManager : SingletonMonobehavior<ScoreManager>
     {
         [SerializeField] int _score = 0;
+        public int Score => _score;
 
         /// <summary>
         /// スコアをカウントするクラス
