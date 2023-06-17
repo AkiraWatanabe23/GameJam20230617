@@ -17,12 +17,14 @@ namespace Usugi
         [SerializeField] Button _toGameSceneButton;
         [SerializeField] string _startSceneName;
         [SerializeField] string _gameSceneName;
+        [SerializeField] List<int> _loadedScore = new List<int>();
 
         private void Start()
         {
             _toTitleSceneButton.onClick.AddListener(() => SceneManager.LoadScene(_startSceneName));
             _toGameSceneButton.onClick.AddListener(() => SceneManager.LoadScene(_gameSceneName));
             ShowScore();
+            SetScore();
             LoadScore();
         }
 
@@ -36,15 +38,27 @@ namespace Usugi
             for (int i = 0; i < 3; i++)
             {
                 var score = PlayerPrefs.GetInt($"Score{i}", 0);
-                _scoreTexts[i].text = $"SCORE:{score}";
-            }
-        }
+                _loadedScore.Add(score);
 
-        void SetScore()
-        {
+            }
+
+            _loadedScore.Sort((a, b) => b - a);
+
             for (int i = 0; i < 3; i++)
             {
-                PlayerPrefs.SetInt($"Score{i}", i);
+                _scoreTexts[i].text = $"{_loadedScore[i]}";
+            }
+        }
+        
+        void SetScore()
+        {
+            _loadedScore.Add(GameSceneManager.Instance.Score);
+            _loadedScore.Sort((a, b) => b - a);
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (_loadedScore[i] > _loadedScore.Count - 1) return;
+                PlayerPrefs.SetInt($"Score{i}", _loadedScore[i]);
             }
         }
     }
