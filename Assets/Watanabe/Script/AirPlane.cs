@@ -9,6 +9,8 @@ public class AirPlane : MonoBehaviour
     [SerializeField] private float _radius = 1f;
     [Tooltip("連射間隔")]
     [SerializeField] private float _interval = 1f;
+    [Range(1f, 5f)]
+    [SerializeField] private float _rotateSpeed = 1f;
 
     [SerializeField] private int _attackValue = 1;
 
@@ -34,7 +36,7 @@ public class AirPlane : MonoBehaviour
         float z = _radius * Mathf.Sin(_theta);
 
         transform.position = new Vector3(x, 0, z) + _center.position;
-        _theta += 3f * (2f * Mathf.PI / 360f);
+        _theta += (2f * Mathf.PI / 360f) * _rotateSpeed;
     }
 
     private void Attack()

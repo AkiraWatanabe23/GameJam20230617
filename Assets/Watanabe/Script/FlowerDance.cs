@@ -1,13 +1,13 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Usugi;
 
-/// <summary> “G‚Ì“®‚« </summary>
+/// <summary> æ•µã®å‹•ã </summary>
 public class FlowerDance : MonoBehaviour, IEnemyBehavior
 {
     [SerializeField] private Image _sabotagePanel = default;
-    [Tooltip("–WŠQ‚·‚é•b”")]
+    [Tooltip("å¦¨å®³ã™ã‚‹ç§’æ•°")]
     [SerializeField] private float _sabotage = 1f;
 
     public void EnemyBehavior()

@@ -485,6 +485,7 @@ MonoBehaviour:
   _center: {fileID: 1519692121}
   _radius: 10
   _interval: 0.5
+  _rotateSpeed: 1
   _attackValue: 1
 --- !u!1 &1519692117
 GameObject:
