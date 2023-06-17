@@ -34,6 +34,7 @@ namespace Usugi
         /// <param name="damage"></param>
         public void Hit(int damage)
         {
+            Debug.Log("Hit");
             _hp -= damage;
             if (_hp <= 0) Death();
         }
