@@ -62,7 +62,7 @@ namespace Usugi
         /// <summary>
         /// リザルトシーンをロードする
         /// </summary>
-        void LoadResultScene()
+        public void LoadResultScene()
         {
             SceneManager.LoadScene(_resultSceneName);
         }

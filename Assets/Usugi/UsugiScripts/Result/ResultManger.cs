@@ -23,8 +23,8 @@ namespace Usugi
 
         private void Start()
         {
-            _toTitleSceneButton.onClick.AddListener(() => SceneManager.LoadScene(Consts.Scenes[_startSceneName]));
-            _toGameSceneButton.onClick.AddListener(() => SceneManager.LoadScene(Consts.Scenes[_gameSceneName]));
+            _toTitleSceneButton.onClick.AddListener(() => Fade.Instance.StartFadeOut());
+            _toGameSceneButton.onClick.AddListener(() => Fade.Instance.StartFadeOut());
             ShowScore();
             SetScore();
             LoadScore();
@@ -62,6 +62,11 @@ namespace Usugi
                 if (_loadedScore[i] > _loadedScore.Count - 1) return;
                 PlayerPrefs.SetInt($"Score{i}", _loadedScore[i]);
             }
+        }
+
+        public void SceneLoad()
+        {
+            SceneManager.LoadScene(Consts.Scenes[_startSceneName]);
         }
     }
 }
