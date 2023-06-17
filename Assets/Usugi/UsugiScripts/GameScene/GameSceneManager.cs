@@ -1,7 +1,6 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using Constants;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Usugi
 {
@@ -12,10 +11,25 @@ namespace Usugi
     {
         [SerializeField] int _score = 0;
         [SerializeField] float _limiTime = 30;
-        [SerializeField] Text _scoreText;
-        [SerializeField] Text _timerText;
         string _gameSceneName = "";
-        public int Score => _score;
+        public int Score
+        {
+            get => _score;
+            private set
+            {
+                GameSceneUI.Instance.ScoreText.text = value.ToString();
+                _score = value;
+            }
+        }
+        public float LimitTime
+        {
+            get => _limiTime;
+            private set
+            {
+                GameSceneUI.Instance.TimerText.text = value.ToString();
+                _limiTime = value;
+            }
+        }
 
         private void Start()
         {
@@ -26,16 +40,6 @@ namespace Usugi
         private void Update()
         {
             CountTime();
-            SetText();
-        }
-
-        private void SetText()
-        {
-            if (!_scoreText) return;
-            if (!_timerText) return;
-
-            _scoreText.text = $"{_score}";
-            _timerText.text = $"{_limiTime}";
         }
 
         /// <summary>
@@ -44,7 +48,7 @@ namespace Usugi
         /// <param name="point"></param>
         public void AddScore(int point)
         {
-            _score += point;
+            Score += point;
         }
 
         /// <summary>
@@ -62,7 +66,7 @@ namespace Usugi
         /// </summary>
         void CountTime()
         {
-            _limiTime -= Time.deltaTime;
+            LimitTime -= Time.deltaTime;
 
             if (_limiTime <= 0)
             {

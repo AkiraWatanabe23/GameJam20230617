@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Usugi;
 
@@ -12,15 +11,7 @@ public class FlowerDance : MonoBehaviour, IEnemyBehavior
 
     public void EnemyBehavior()
     {
-        StartCoroutine(Sabotage());
-    }
-
-    private IEnumerator Sabotage()
-    {
-        _sabotagePanel.gameObject.SetActive(true);
-        yield return new WaitForSeconds(_sabotage);
-
-        _sabotagePanel.gameObject.SetActive(false);
+        StartCoroutine(GameSceneUI.Instance.Sabotage(_sabotage));
     }
 
     private void OnBecameVisible()
