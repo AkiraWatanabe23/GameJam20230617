@@ -12,6 +12,7 @@ namespace Usugi
     {
         [SerializeField] int _hp = 1;
         [SerializeField] int _point = 1;
+        [SerializeField] GameObject _effect;
         IEnemyBehavior _enemyBehavior;
 
         private void Start()
@@ -46,6 +47,8 @@ namespace Usugi
         {
             Debug.Log("Death");
             GameSceneManager.Instance.AddScore(_point);
+            Instantiate(_effect);
+            Destroy(this.gameObject);
         }
     }
 
