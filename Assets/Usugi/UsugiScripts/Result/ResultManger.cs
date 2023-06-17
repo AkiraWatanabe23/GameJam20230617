@@ -18,7 +18,7 @@ namespace Usugi
         [SerializeField] Button _toGameSceneButton;
         SceneNames _startSceneName = SceneNames.TITLE_SCENE;
         SceneNames _gameSceneName = SceneNames.GAME_SCENE;
-        List<int> _loadedScore = new List<int>();
+        [SerializeField] List<int> _loadedScore = new List<int>();
         int _highScoreCount = 3;
 
         private void Start()
@@ -26,7 +26,6 @@ namespace Usugi
             _toTitleSceneButton.onClick.AddListener(() => Fade.Instance.StartFadeOut());
             _toGameSceneButton.onClick.AddListener(() => Fade.Instance.StartFadeOut());
             ShowScore();
-            SetScore();
             LoadScore();
         }
 
@@ -45,6 +44,7 @@ namespace Usugi
             }
 
             _loadedScore.Sort((a, b) => b - a);
+            SetScore();
 
             for (int i = 0; i < 3; i++)
             {
@@ -56,11 +56,13 @@ namespace Usugi
         {
             _loadedScore.Add(GameSceneManager.Instance.Score);
             _loadedScore.Sort((a, b) => b - a);
+            Debug.Log(_loadedScore.Count);
 
             for (int i = 0; i < _highScoreCount; i++)
             {
-                if (_loadedScore[i] > _loadedScore.Count - 1) return;
+                if (i > _loadedScore.Count - 1) return;
                 PlayerPrefs.SetInt($"Score{i}", _loadedScore[i]);
+                Debug.Log($"{_loadedScore[i]}");
             }
         }
 
