@@ -26,6 +26,11 @@ namespace Usugi
             get => _limiTime;
             private set
             {
+                Debug.Log(value);
+
+                var currentSceneName = SceneManager.GetActiveScene().name;
+                if (currentSceneName == "Result") return;
+
                 GameSceneUI.Instance.TimerText.text = value.ToString("F0");
                 _limiTime = value;
             }

@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroy: 0
-  _score: 2224
+  _score: 0
   _limiTime: 30
 --- !u!1 &1348373246
 GameObject:
