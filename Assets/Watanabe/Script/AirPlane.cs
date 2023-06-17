@@ -67,6 +67,7 @@ public class AirPlane : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(GetCenterPoint()), out RaycastHit hit))
             {
+                Debug.Log("あたった");
                 if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
             }
         }
@@ -74,6 +75,7 @@ public class AirPlane : MonoBehaviour
         {
             if (Physics.SphereCast(Camera.main.ScreenPointToRay(GetCenterPoint()), 5f, out RaycastHit hit))
             {
+                Debug.Log("あたった");
                 if (hit.collider.gameObject.TryGetComponent(out Target target)) target.Hit(_attackValue);
             }
         }
