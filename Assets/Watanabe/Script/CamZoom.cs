@@ -16,8 +16,6 @@ public class CamZoom : MonoBehaviour
 
     private void Zoom(float scroll)
     {
-        //Camera.main.fieldOfView += scroll * _zoomSpeed;
-        //Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, _zoomMinBound, _zoomMaxBound);
         _camera.m_Lens.FieldOfView += scroll * _zoomSpeed;
         _camera.m_Lens.FieldOfView = Mathf.Clamp(_camera.m_Lens.FieldOfView, _zoomMinBound, _zoomMaxBound);
     }

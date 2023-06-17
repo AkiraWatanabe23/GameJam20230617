@@ -84,7 +84,6 @@ public class AirPlane : MonoBehaviour
     {
         var viewportCenter = new Vector3(0.5f, 0.5f, Camera.main.nearClipPlane);
         var worldCenter = Camera.main.ViewportToWorldPoint(viewportCenter);
-        Debug.Log(worldCenter);
 
         return worldCenter;
     }
