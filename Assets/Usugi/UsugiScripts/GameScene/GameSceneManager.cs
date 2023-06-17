@@ -26,7 +26,7 @@ namespace Usugi
             get => _limiTime;
             private set
             {
-                GameSceneUI.Instance.TimerText.text = value.ToString();
+                GameSceneUI.Instance.TimerText.text = value.ToString("F0");
                 _limiTime = value;
             }
         }
