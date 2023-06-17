@@ -44,7 +44,7 @@ namespace Usugi
         void Death()
         {
             Debug.Log("Death");
-            ScoreManager.Instance.AddScore(_point);
+            GameSceneManager.Instance.AddScore(_point);
         }
     }
 
