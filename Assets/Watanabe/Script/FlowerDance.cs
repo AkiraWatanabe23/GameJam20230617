@@ -16,6 +16,7 @@ public class FlowerDance : MonoBehaviour, IEnemyBehavior
 
     private void OnBecameVisible()
     {
+        Debug.Log("みえてる");
         EnemyBehavior();
     }
 }
