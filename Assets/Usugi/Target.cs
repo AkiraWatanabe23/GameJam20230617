@@ -31,7 +31,7 @@ namespace Usugi
         /// </summary>
         void Death()
         {
-
+            Debug.Log("Death");
         }
     }
 
