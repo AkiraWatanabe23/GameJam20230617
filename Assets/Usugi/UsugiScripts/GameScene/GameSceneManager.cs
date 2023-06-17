@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Usugi
@@ -12,6 +13,7 @@ namespace Usugi
     {
         [SerializeField] int _score = 0;
         [SerializeField] float _limiTime = 30;
+        [SerializeField] Text _scoreText;
         string _gameSceneName = "";
         string _resultSceneName = "";
         public int Score => _score;
@@ -25,6 +27,8 @@ namespace Usugi
         private void Update()
         {
             CountTime();
+
+            _scoreText.text = $"{_score}";
         }
 
         /// <summary>

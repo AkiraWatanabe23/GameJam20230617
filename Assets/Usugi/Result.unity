@@ -1048,6 +1048,7 @@ MonoBehaviour:
   - {fileID: 743157495}
   _toTitleSceneButton: {fileID: 967307665}
   _toGameSceneButton: {fileID: 1618614605}
+  _loadedScore: 
 --- !u!4 &1287837327
 Transform:
   m_ObjectHideFlags: 0
@@ -1076,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroy: 0
-  _score: 1
+  _score: 2224
   _limiTime: 30
 --- !u!1 &1348373246
 GameObject:
@@ -1171,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513140, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.size
@@ -1184,18 +1185,18 @@ PrefabInstance:
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1287837328}
+      objectReference: {fileID: 1287837326}
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadResultScene
+      value: SceneLoad
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Usugi.GameSceneManager, Assembly-CSharp
+      value: Usugi.ResultManger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491120513142, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: _onCompleteFadeOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1303,6 +1304,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565511491137475026, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565511491137475027, guid: 3f50fd502bcaeff4894e87a47249d4f5, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
