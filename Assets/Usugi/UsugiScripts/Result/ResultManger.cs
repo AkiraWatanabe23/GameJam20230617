@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Constants;
  
 namespace Usugi
 {
@@ -15,15 +16,15 @@ namespace Usugi
         [SerializeField] List<Text> _scoreTexts;
         [SerializeField] Button _toTitleSceneButton;
         [SerializeField] Button _toGameSceneButton;
-        [SerializeField] string _startSceneName;
-        [SerializeField] string _gameSceneName;
-        [SerializeField] List<int> _loadedScore = new List<int>();
+        SceneNames _startSceneName = SceneNames.TITLE_SCENE;
+        SceneNames _gameSceneName = SceneNames.GAME_SCENE;
+        List<int> _loadedScore = new List<int>();
         int _highScoreCount = 3;
 
         private void Start()
         {
-            _toTitleSceneButton.onClick.AddListener(() => SceneManager.LoadScene(_startSceneName));
-            _toGameSceneButton.onClick.AddListener(() => SceneManager.LoadScene(_gameSceneName));
+            _toTitleSceneButton.onClick.AddListener(() => SceneManager.LoadScene(Consts.Scenes[_startSceneName]));
+            _toGameSceneButton.onClick.AddListener(() => SceneManager.LoadScene(Consts.Scenes[_gameSceneName]));
             ShowScore();
             SetScore();
             LoadScore();
