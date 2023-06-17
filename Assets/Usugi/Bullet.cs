@@ -16,7 +16,6 @@ namespace Usugi
             other.TryGetComponent(out Target target);
 
             if (target) target.Hit(_damage);
-
         }
     }
 }
