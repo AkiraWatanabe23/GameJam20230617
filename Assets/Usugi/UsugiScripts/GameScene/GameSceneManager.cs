@@ -31,6 +31,9 @@ namespace Usugi
 
         private void SetText()
         {
+            if (!_scoreText) return;
+            if (!_timerText) return;
+
             _scoreText.text = $"{_score}";
             _timerText.text = $"{_limiTime}";
         }
