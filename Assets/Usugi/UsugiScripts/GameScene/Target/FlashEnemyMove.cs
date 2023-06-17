@@ -8,12 +8,12 @@ using Usugi;
 public class FlashEnemyMove : MonoBehaviour, IEnemyBehavior
 {
     [SerializeField] float _dur = 3;
-    MeshRenderer _renderer;
+    Renderer[] _renderer;
     Collider _collider;
     
     public void EnemyBehavior()
     {
-        TryGetComponent(out _renderer);
+        _renderer = GetComponentsInChildren<Renderer>();
         TryGetComponent(out _collider);
         StartCoroutine(nameof(DoFlash));
     }
@@ -32,10 +32,13 @@ public class FlashEnemyMove : MonoBehaviour, IEnemyBehavior
     private void ChangeVisibility(bool visible)
     {
 
-        if (!_renderer) return;
+        if (_renderer.Length == 0) return;
         if (!_collider) return;
 
-        _renderer.enabled = visible;
+        foreach (var rend in _renderer)
+        {
+            rend.enabled = visible;
+        }
         _collider.enabled = visible;
     }
 }
